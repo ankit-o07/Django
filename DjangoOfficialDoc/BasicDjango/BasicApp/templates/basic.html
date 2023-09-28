@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% title block %}{% endblock %}</title>
+        <style>
+            {% css block %}{% endblock %}
+            </style>
+</head>
+{% load static %}
+<body>
+    <nav>
+        <ul>
+            <a href=""><li>Logo</li></a>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>Search</li></a>
+            <!-- should be put in last of page, all depends on design -->
+            <a href=""><li>About Us</li></a>
+            <a href=""><li>Contact Us</li></a>
+            <!-- dekho kya karte hai -->
+            <a href=""><li>User logo</li></a>
+        </ul>
+    </nav>
+    {% body block %}{% endblock %}
+    {% js block %}{% endblock %}
+</body>
+</html>

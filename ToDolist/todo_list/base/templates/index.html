@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .container{
+            background:wheat;
+            max-width: 550px;
+            margin: auto;
+            margin-top: 70px;
+        }
+        .header{
+
+        }
+        .control{
+
+        }
+        .task{
+            margin-left: 10px ;
+            
+
+        }
+        .Circle{
+            float: left;
+            background: red;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+        }
+        .task-cross{
+            float: right;
+        }
+        .task-add{
+            float: right;
+        }
+        .task-p{
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <!---------------------------- header ----------------------->
+    <div class="hearder">
+        <a href=""><p style="text-align: right;">logout</p></a>
+        <h1>Ankit</h1>
+        <h3>You have 2  incomplete task</h3>
+
+    </div>
+    <!---------------------------- control ----------------------->
+    <div class="control">
+        <form action="post">
+            <input type="text">
+            <button type="submit">Search</button>
+            <a href="/details"><div class="add task-add">Add</div></a>
+        </form>
+    </div>
+    <!---------------------------- tasks ----------------------->
+    <div class="control">
+    <div class="task">
+        <p class="task-cross">&#10060;</p> 
+        <div class="Circle"></div>
+        <p  class="task-p">Task1</p>
+    </div>
+    <div class="task">
+        <div class="Circle"></div>
+        <p class="task-cross">&#10060;</p> 
+        <p class="task-p">Task2</p>
+    </div>
+    <div class="task">
+        <div class="Circle"></div>
+        <p class="task-cross">&#10060;</p> 
+        <p class="task-p">Task3</p>
+    </div>
+   </div>
+</body>
+</html>

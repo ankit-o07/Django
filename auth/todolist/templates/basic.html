@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main-containter{
+            margin: auto;
+            margin-top: 120px;
+            background-color: wheat;
+            width: 750px;
+            
+        }
+        .header{
+            background-color: aquamarine;
+
+            height: 70px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .name{
+            margin: auto;
+            
+        }
+        .date{
+            margin: auto;
+        }
+        .todolist{
+            display: grid;
+            grid-template-columns: 90% 10%;
+            
+        }
+        .title{
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 20px;
+        }
+        .check_box{
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-containter">
+            <div class="header">
+                <p class="name">Name</p>
+                <div class="date">Date</div>
+            </div>
+
+            {% for x in object %}
+            <div class="todolist">
+                    <div class="title">{{ x.title }}</div>
+                    <form action="/" method="post">
+                        {% csrf_token %} 
+                        <input type="checkbox">
+                    </form>
+            </div>
+            {% endfor %}
+            <div>
+                <a href="create/"> add task</a>
+            </div>
+
+    </div>
+   
+</body>
+</html>
